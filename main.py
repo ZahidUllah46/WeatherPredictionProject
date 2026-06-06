@@ -18,7 +18,7 @@ print("=" * 60)
 # -----------------------------
 data = pd.read_csv("Project 1 - Weather Dataset.csv")
 
-print(f"\n✅ Dataset Loaded: {data.shape[0]} rows, {data.shape[1]} columns")
+print(f"\n Dataset Loaded: {data.shape[0]} rows, {data.shape[1]} columns")
 
 # Remove unnecessary column
 if "Date/Time" in data.columns:
@@ -28,11 +28,11 @@ if "Date/Time" in data.columns:
 encoder = LabelEncoder()
 data["Weather"] = encoder.fit_transform(data["Weather"])
 
-# ✅ FIX: weather_classes directly from encoder
+#  FIX: weather_classes directly from encoder
 weather_classes = encoder.classes_
 num_classes = len(weather_classes)
 
-print(f"\n✅ Weather Classes Found: {num_classes}")
+print(f"\n Weather Classes Found: {num_classes}")
 print(f"   Classes: {list(weather_classes)}")
 
 # Input and Output
@@ -43,7 +43,7 @@ y = data["Weather"].values
 scaler = MinMaxScaler()
 X = scaler.fit_transform(X)
 
-print(f"\n✅ Data Prepared:")
+print(f"\n Data Prepared:")
 print(f"   Input Features : {X.shape[1]}")
 print(f"   Total Samples  : {X.shape[0]}")
 print(f"   Total Classes  : {num_classes}")
@@ -65,7 +65,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 y_train_labels = np.argmax(y_train, axis=1)
 y_test_labels  = np.argmax(y_test,  axis=1)
 
-print(f"\n✅ Data Split:")
+print(f"\n Data Split:")
 print(f"   Training Samples : {X_train.shape[0]}")
 print(f"   Testing Samples  : {X_test.shape[0]}")
 
@@ -75,7 +75,7 @@ print(f"   Testing Samples  : {X_test.shape[0]}")
 
 input_neurons  = X_train.shape[1]
 hidden_neurons = 10
-output_neurons = num_classes   # ✅ FIX: exact number of classes
+output_neurons = num_classes   #  FIX: exact number of classes
 
 np.random.seed(42)
 
@@ -88,7 +88,7 @@ bias_output = np.zeros((1, output_neurons))
 
 learning_rate = 0.1
 
-print(f"\n✅ Neural Network Architecture:")
+print(f"\n Neural Network Architecture:")
 print(f"   Input Layer  : {input_neurons} neurons")
 print(f"   Hidden Layer : {hidden_neurons} neurons")
 print(f"   Output Layer : {output_neurons} neurons")
@@ -163,7 +163,7 @@ for epoch in range(epochs):
     if epoch % 200 == 0:
         print(f"   Epoch {epoch:4d} | Loss: {loss:.4f} | Accuracy: {train_accuracy:.2f}%")
 
-print("\n✅ Training Complete!")
+print("\n Training Complete!")
 
 # -----------------------------
 # TESTING
@@ -176,11 +176,11 @@ test_accuracy       = np.mean(predicted_labels == y_test_labels) * 100
 print("\n" + "=" * 60)
 print("   FINAL RESULTS")
 print("=" * 60)
-print(f"\n   ✅ Test Accuracy : {test_accuracy:.2f}%")
-print(f"   ✅ Final Loss    : {error_list[-1]:.4f}")
-print(f"   ✅ Total Epochs  : {epochs}")
+print(f"\n    Test Accuracy : {test_accuracy:.2f}%")
+print(f"    Final Loss    : {error_list[-1]:.4f}")
+print(f"    Total Epochs  : {epochs}")
 
-# ✅ FIX: Classification Report — labels list se match karwaya
+#  FIX: Classification Report — labels list se match karwaya
 unique_labels = np.unique(np.concatenate([y_test_labels, predicted_labels]))
 print("\n" + "=" * 60)
 print("   CLASSIFICATION REPORT")
@@ -341,7 +341,7 @@ plt.savefig('backpropagation_results.png', dpi=150, bbox_inches='tight',
             facecolor=fig.get_facecolor())
 plt.show()
 
-print("\n✅ Graph saved as: backpropagation_results.png")
+print("\n Graph saved as: backpropagation_results.png")
 print("\n" + "=" * 60)
 print("   Zahid your project has been completed congratulations")
 print("=" * 6000)
