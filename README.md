@@ -144,7 +144,7 @@ python main.py
 
 
 
-## 📁 Project Structure
+##  Project Structure
 
 text
 WeatherPredictionProject/
