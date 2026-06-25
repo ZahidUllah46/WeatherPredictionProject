@@ -6,7 +6,6 @@ Weather forecasting plays a vital role in agriculture, transportation, disaster 
 
 The objective of this project is to predict weather conditions based on meteorological features such as temperature, humidity, wind speed, visibility, pressure, and dew point. Instead of relying on high-level deep learning frameworks, the neural network was manually implemented to gain a deeper understanding of machine learning fundamentals and neural network training processes.
 
-
 ##Objectives
 
 * Develop a weather prediction model using Artificial Neural Networks.
@@ -121,15 +120,12 @@ The best performance was achieved on major weather categories such as:
 
 ### Step 1: Clone Repository
 
-```bash
+bash
 git clone https://github.com/yourusername/WeatherPredictionProject.git
-```
 
 ### Step 2: Navigate to Project Directory
-
 bash
 cd WeatherPredictionProject
-
 
 ### Step 3: Install Dependencies
 
@@ -185,7 +181,6 @@ This project provided practical experience in:
 * Model Evaluation
 * Python Programming
 
----
 
 ## Author
 
