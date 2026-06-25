@@ -6,7 +6,7 @@ Weather forecasting plays a vital role in agriculture, transportation, disaster 
 
 The objective of this project is to predict weather conditions based on meteorological features such as temperature, humidity, wind speed, visibility, pressure, and dew point. Instead of relying on high-level deep learning frameworks, the neural network was manually implemented to gain a deeper understanding of machine learning fundamentals and neural network training processes.
 
-##Objectives
+## Objectives
 
 * Develop a weather prediction model using Artificial Neural Networks.
 * Implement the Backpropagation algorithm from scratch.
