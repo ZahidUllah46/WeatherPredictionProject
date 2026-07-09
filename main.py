@@ -147,10 +147,12 @@ for epoch in range(epochs):
     train_accuracy = np.mean(train_preds == y_train_labels) * 100
     accuracy_list.append(train_accuracy)
 
+    
     # BACKPROPAGATION
     output_error = predicted_output - y_train
     d_output     = output_error / len(X_train)
 
+    
     hidden_error = d_output.dot(weights_hidden_output.T)
     d_hidden     = hidden_error * sigmoid_derivative(hidden_output)
 
@@ -336,11 +338,9 @@ fig.suptitle(
     'Weather Prediction — Backpropagation Neural Network',
     fontsize=16, fontweight='bold', color=TEXT_COLOR, y=0.98
 )
-
 plt.savefig('backpropagation_results.png', dpi=150, bbox_inches='tight',
             facecolor=fig.get_facecolor())
 plt.show()
-
 print("\n Graph saved as: backpropagation_results.png")
 print("\n" + "=" * 60)
 print("   Zahid your project has been completed congratulations")
